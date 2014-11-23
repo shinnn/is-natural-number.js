@@ -1,0 +1,53 @@
+{
+  "name": "is-natural-number",
+  "version": "0.0.0",
+  "description": "Check if a number is a natural number",
+  "repository": "shinnn/is-natural-number.js",
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "scripts": {
+    "pretest": "eslint *.js & jscs *.js",
+    "test": "node test.js | tap-dot",
+    "coverage": "istanbul cover test.js",
+    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/is-natural-number.js/blob/master/LICENSE"
+    }
+  ],
+  "main": "is-natural-number-cjs.js",
+  "files": [
+    "is-natural-number-cjs.js",
+    "LICENSE"
+  ],
+  "keywords": [
+    "number",
+    "natural",
+    "check",
+    "int",
+    "integer",
+    "math",
+    "mathematics",
+    "range",
+    "browser",
+    "client-side"
+  ],
+  "devDependencies": {
+    "eslint": "^0.9.2",
+    "is-integer": "^1.0.3",
+    "istanbul": "^0.3.2",
+    "istanbul-coveralls": "^1.0.1",
+    "jscs": "^1.7.3",
+    "require-uncached": "^1.0.2",
+    "tap-dot": "^0.2.3",
+    "tape": "^3.0.3"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98
+  }
+}
