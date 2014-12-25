@@ -11,7 +11,7 @@
     "mathematics",
     "range"
   ],
-  "main": "./is-natural-number.js",
+  "main": "is-natural-number.js",
   "homepage": "https://github.com/shinnn/is-natural-number.js",
   "repository": {
     "type": "git",
@@ -26,12 +26,9 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "bower_components",
+    "*.js",
+    "*.json",
     "coverage",
-    "node_modules",
-    "test.js",
-    "is-natural-number-cjs.js",
-    "package.json",
-    "component.json"
+    "node_modules"
   ]
 }

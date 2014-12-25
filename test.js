@@ -3,7 +3,7 @@
 var requireUncached = require('require-uncached');
 var test = require('tape');
 
-var bowerMainPath = require('./bower.json').main;
+var bowerMainPath = './' + require('./bower.json').main;
 
 function runTest(description, main) {
   test(description, function(t) {
