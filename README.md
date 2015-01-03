@@ -1,9 +1,9 @@
 # is-natural-number.js
 
-[![NPM version](https://badge.fury.io/js/is-natural-number.svg)](https://www.npmjs.org/package/is-natural-number)
-[![Bower version](https://badge.fury.io/bo/is-natural-number.svg)](https://github.com/shinnn/is-natural-number.js/releases)
-[![Build Status](https://travis-ci.org/shinnn/is-natural-number.js.svg?branch=master)](https://travis-ci.org/shinnn/is-natural-number.js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/is-natural-number.js.svg)](https://coveralls.io/r/shinnn/is-natural-number.js?branch=master)
+[![NPM version](https://img.shields.io/npm/v/is-natural-number.svg?style=flat)](https://www.npmjs.com/package/is-natural-number)
+[![Bower version](https://img.shields.io/bower/v/is-natural-number.svg?style=flat)](https://github.com/shinnn/is-natural-number.js/releases)
+[![Build Status](https://travis-ci.org/shinnn/is-natural-number.js.svg)](https://travis-ci.org/shinnn/is-natural-number.js)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/is-natural-number.js.svg?style=flat)](https://coveralls.io/r/shinnn/is-natural-number.js?branch=master)
 [![devDependency Status](https://david-dm.org/shinnn/is-natural-number.js/dev-status.svg)](https://david-dm.org/shinnn/is-natural-number.js#info=devDependencies)
 
 Check if a number is a [natural number](http://wikipedia.org/wiki/Natural_number)
@@ -12,7 +12,7 @@ Check if a number is a [natural number](http://wikipedia.org/wiki/Natural_number
 
 ### Package managers
 
-#### [npm](https://www.npmjs.org/)
+#### [npm](https://www.npmjs.com/)
 
 ```
 npm install is-natural-number
