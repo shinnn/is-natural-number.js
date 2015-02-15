@@ -1,9 +1,9 @@
 # is-natural-number.js
 
-[![NPM version](https://img.shields.io/npm/v/is-natural-number.svg?style=flat)](https://www.npmjs.com/package/is-natural-number)
-[![Bower version](https://img.shields.io/bower/v/is-natural-number.svg?style=flat)](https://github.com/shinnn/is-natural-number.js/releases)
+[![NPM version](https://img.shields.io/npm/v/is-natural-number.svg)](https://www.npmjs.com/package/is-natural-number)
+[![Bower version](https://img.shields.io/bower/v/is-natural-number.svg)](https://github.com/shinnn/is-natural-number.js/releases)
 [![Build Status](https://travis-ci.org/shinnn/is-natural-number.js.svg)](https://travis-ci.org/shinnn/is-natural-number.js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/is-natural-number.js.svg?style=flat)](https://coveralls.io/r/shinnn/is-natural-number.js?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/is-natural-number.js.svg)](https://coveralls.io/r/shinnn/is-natural-number.js?branch=master)
 [![devDependency Status](https://david-dm.org/shinnn/is-natural-number.js/dev-status.svg)](https://david-dm.org/shinnn/is-natural-number.js#info=devDependencies)
 
 Check if a number is a [natural number](http://wikipedia.org/wiki/Natural_number)
@@ -70,6 +70,6 @@ isNaturalNumber(0, true); //=> true
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
