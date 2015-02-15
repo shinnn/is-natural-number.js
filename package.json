@@ -21,8 +21,7 @@
   ],
   "main": "is-natural-number-cjs.js",
   "files": [
-    "is-natural-number-cjs.js",
-    "LICENSE"
+    "is-natural-number-cjs.js"
   ],
   "keywords": [
     "number",
@@ -37,13 +36,13 @@
     "client-side"
   ],
   "devDependencies": {
-    "eslint": "^0.11.0",
+    "eslint": "^0.14.1",
     "istanbul": "^0.3.5",
     "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.9.0",
+    "jscs": "^1.11.3",
     "require-uncached": "^1.0.2",
-    "tap-dot": "^0.2.3",
-    "tape": "^3.0.3"
+    "tap-dot": "^1.0.0",
+    "tape": "^3.5.0"
   },
   "jscsConfig": {
     "preset": "google",
