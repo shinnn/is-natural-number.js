@@ -3,22 +3,14 @@
   "version": "2.0.0",
   "description": "Check if a number is a natural number",
   "repository": "shinnn/is-natural-number.js",
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "jscs *.js && eslint *.js",
-    "test": "node test.js | tap-dot",
-    "coverage": "istanbul cover test.js",
+    "pretest": "eslint --config @shinnn is-natural-number-cjs.js is-natural-number.js test.js",
+    "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js | tap-dot",
+    "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/is-natural-number.js/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "main": "is-natural-number-cjs.js",
   "files": [
     "is-natural-number-cjs.js"
@@ -36,18 +28,11 @@
     "client-side"
   ],
   "devDependencies": {
-    "eslint": "^0.19.0",
-    "istanbul": "^0.3.13",
-    "istanbul-coveralls": "^1.0.2",
-    "jscs": "^1.12.0",
+    "@shinnn/eslint-config": "^1.4.0",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
     "require-uncached": "^1.0.2",
-    "tap-dot": "^1.0.0",
-    "tape": "^4.0.0"
-  },
-  "jscsConfig": {
-    "preset": "google",
-    "maximumLineLength": 98,
-    "requireBlocksOnNewline": true,
-    "validateLineBreaks": "LF"
+    "tap-dot": "^1.0.1",
+    "tape": "^4.2.2"
   }
 }

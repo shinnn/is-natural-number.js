@@ -2,7 +2,6 @@
  * is-natural-number.js | MIT (c) Shinnosuke Watanabe
  * https://github.com/shinnn/is-natural-number.js
 */
-
 module.exports = (function() {
   'use strict';
 

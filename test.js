@@ -1,10 +1,10 @@
-'use strict';
+'use strong';
 
-var requireUncached = require('require-uncached');
-var test = require('tape');
+const requireUncached = require('require-uncached');
+const test = require('tape');
 
 function runTest(description, main) {
-  test(description, function(t) {
+  test(description, t => {
     t.plan(28);
 
     t.equal(main.name, 'isNaturalNumber');
@@ -42,18 +42,18 @@ function runTest(description, main) {
 }
 
 global.window = {};
-var bowerMainPath = './' + require('./bower.json').main;
-var nativeIsInteger = Number.isInteger;
+const bowerMainPath = './' + require('./bower.json').main;
+const nativeIsInteger = Number.isInteger;
 
 Number.isInteger = null;
 
 requireUncached(bowerMainPath);
 
-runTest('Test for require(\'is-natural-number\')', requireUncached('./'));
-runTest('window.isNaturalNumber', window.isNaturalNumber);
+runTest('Test for require(\'is-natural-number\') on ES5 environment', requireUncached('.'));
+runTest('window.isNaturalNumber on ES5 environment', global.window.isNaturalNumber);
 
 Number.isInteger = nativeIsInteger;
 require(bowerMainPath);
 
-runTest('Test for require(\'is-natural-number\') on ES6 environment', require('./'));
-runTest('window.isNaturalNumber on ES6 environment', window.isNaturalNumber);
+runTest('Test for require(\'is-natural-number\') on ES6+ environment', require('.'));
+runTest('window.isNaturalNumber on ES6+ environment', global.window.isNaturalNumber);
