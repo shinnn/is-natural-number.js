@@ -11,7 +11,7 @@
     "mathematics",
     "range"
   ],
-  "main": "is-natural-number.js",
+  "main": "browser.js",
   "homepage": "https://github.com/shinnn/is-natural-number.js",
   "repository": {
     "type": "git",

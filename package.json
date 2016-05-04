@@ -10,9 +10,10 @@
     "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js"
   },
   "license": "MIT",
-  "main": "is-natural-number-cjs.js",
+  "jsnext:main": "index.jsnext.js",
   "files": [
-    "is-natural-number-cjs.js"
+    "index.js",
+    "index.jsnext.js"
   ],
   "keywords": [
     "number",

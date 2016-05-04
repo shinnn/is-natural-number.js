@@ -5,9 +5,7 @@ const test = require('tape');
 
 function runTest(description, main) {
   test(description, t => {
-    t.plan(28);
-
-    t.equal(main.name, 'isNaturalNumber');
+    t.strictEqual(main.name, 'isNaturalNumber');
 
     t.ok(main(1));
     t.ok(main(1e+1));
@@ -30,6 +28,7 @@ function runTest(description, main) {
     t.notOk(main(Number.NEGATIVE_INFINITY));
     t.notOk(main(NaN));
     t.notOk(main(Number));
+    t.notOk(main('1'));
     t.notOk(main(false));
     t.notOk(main(true));
     t.notOk(main(this));
@@ -38,6 +37,8 @@ function runTest(description, main) {
 
     t.ok(main(0, true));
     t.notOk(main(0, false));
+
+    t.end();
   });
 }
 
