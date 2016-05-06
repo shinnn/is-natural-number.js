@@ -12,16 +12,14 @@
     "range"
   ],
   "main": "browser.js",
+  "moduleType": "globals",
   "homepage": "https://github.com/shinnn/is-natural-number.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/is-natural-number.js.git"
   },
   "authors": [
-    {
-      "name": "Shinnosuke Watanabe",
-      "url": "https://github.com/shinnn"
-    }
+    "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
   "license": "MIT",
   "ignore": [
