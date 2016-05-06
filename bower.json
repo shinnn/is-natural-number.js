@@ -1,6 +1,6 @@
 {
   "name": "is-natural-number",
-  "description": "Check if a number is a natural number",
+  "description": "Check if a value is a natural number",
   "keywords": [
     "number",
     "natural",
