@@ -36,8 +36,20 @@ function runTest(description, main) {
     t.notOk(main(null));
     t.notOk(main(undefined));
 
-    t.ok(main(0, true));
-    t.notOk(main(0, false));
+    t.ok(main(0, {includeZero: true}));
+    t.notOk(main(0, {includeZero: false}));
+
+    t.throws(
+      () => main(0, true),
+      /^TypeError.*true is not an object\. Expected an object that has boolean `includeZero` property\./
+    );
+
+    t.throws(
+      () => main(0, {includeZero: '1'}),
+      /^TypeError.*1 is neither true nor false\. `includeZero` option must be a Boolean value\./
+    );
+
+    t.doesNotThrow(() => main(0, {}));
 
     t.end();
   });

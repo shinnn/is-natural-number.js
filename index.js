@@ -4,6 +4,28 @@
 */
 'use strict';
 
-module.exports = function isNaturalNumber(val, zero) {
-  return val >= (zero ? 0 : 1) && Number.isSafeInteger(val);
+module.exports = function isNaturalNumber(val, option) {
+  if (option) {
+    if (typeof option !== 'object') {
+      throw new TypeError(
+        String(option) +
+        ' is not an object. Expected an object that has boolean `includeZero` property.'
+      );
+    }
+
+    if ('includeZero' in option) {
+      if (typeof option.includeZero !== 'boolean') {
+        throw new TypeError(
+          String(option.includeZero) +
+          ' is neither true nor false. `includeZero` option must be a Boolean value.'
+        );
+      }
+
+      if (option.includeZero && val === 0) {
+        return true;
+      }
+    }
+  }
+
+  return val >= 1 && Number.isSafeInteger(val);
 };

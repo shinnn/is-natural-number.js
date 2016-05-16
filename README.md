@@ -6,7 +6,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-natural-number.js.svg)](https://coveralls.io/r/shinnn/is-natural-number.js?branch=master)
 [![devDependency Status](https://david-dm.org/shinnn/is-natural-number.js/dev-status.svg)](https://david-dm.org/shinnn/is-natural-number.js#info=devDependencies)
 
-Check if a number is a [natural number](http://wikipedia.org/wiki/Natural_number)
+Check if a value is a [natural number](https://wikipedia.org/wiki/Natural_number)
 
 ## Installation
 
@@ -36,11 +36,11 @@ var isNaturalNumber = require('shinnn/is-natural-number.js');
 
 ## API
 
-### isNaturalNumber(*number*, *includeZero*)
+### isNaturalNumber(*number*, *option*)
 
 *number*: `Number`  
-*includeZero*: `Boolean`  
-Return: `String`
+*option*: `Object`  
+Return: `Boolean`
 
 It returns `true` if the first argument is one of the natural numbers. If not, or the argument is not a number, it returns `false`.
 
@@ -55,8 +55,9 @@ isNaturalNumber('10'); //=> false
 
 *Check [the test](./test.js) for more detailed specifications.*
 
-#### includeZero
+#### option.includeZero
 
+Type: `Boolean`
 Default: `false`
 
 By default the number `0` is not regarded as a natural number.
@@ -65,7 +66,7 @@ Setting this option `true` makes `0` regarded as a natural number.
 
 ```javascript
 isNaturalNumber(0); //=> false
-isNaturalNumber(0, true); //=> true
+isNaturalNumber(0, {includeZero: true}); //=> true
 ```
 
 ## License
