@@ -1,11 +1,11 @@
 {
   "name": "is-natural-number",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Check if a value is a natural number",
   "repository": "shinnn/is-natural-number.js",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config @shinnn is-natural-number-cjs.js --ignore-path .gitignore .",
+    "pretest": "eslint --config @shinnn --ignore-path .gitignore .",
     "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js | tap-dot",
     "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js"
   },
