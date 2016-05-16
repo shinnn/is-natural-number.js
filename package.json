@@ -1,6 +1,6 @@
 {
   "name": "is-natural-number",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Check if a value is a natural number",
   "repository": "shinnn/is-natural-number.js",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
