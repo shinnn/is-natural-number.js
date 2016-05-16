@@ -1,6 +1,7 @@
 'use strong';
 
-const requireUncached = require('require-uncached');
+const requireFromString = require('require-from-string');
+const {rollup} = require('rollup');
 const test = require('tape');
 
 function runTest(description, main) {
@@ -43,18 +44,11 @@ function runTest(description, main) {
 }
 
 global.window = {};
-const bowerMainPath = './' + require('./bower.json').main;
-const nativeIsInteger = Number.isInteger;
+require('./' + require('./bower.json').main);
 
-Number.isInteger = null;
+runTest('require(\'is-natural-number\')', require('.'));
+runTest('window.isNaturalNumber', global.window.isNaturalNumber);
 
-requireUncached(bowerMainPath);
-
-runTest('Test for require(\'is-natural-number\') on ES5 environment', requireUncached('.'));
-runTest('window.isNaturalNumber on ES5 environment', global.window.isNaturalNumber);
-
-Number.isInteger = nativeIsInteger;
-require(bowerMainPath);
-
-runTest('Test for require(\'is-natural-number\') on ES6+ environment', require('.'));
-runTest('window.isNaturalNumber on ES6+ environment', global.window.isNaturalNumber);
+rollup({entry: require('./package.json')['jsnext:main']}).then(bundle => {
+  runTest('Module exports', requireFromString(bundle.generate({format: 'cjs'}).code, 'index.jsnext.js'));
+});

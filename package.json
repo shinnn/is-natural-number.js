@@ -31,7 +31,8 @@
     "@shinnn/eslint-config": "^2.1.0",
     "eslint": "^2.9.0",
     "istanbul": "^0.4.3",
-    "require-uncached": "^1.0.2",
+    "require-from-string": "^1.2.0",
+    "rollup": "^0.26.3",
     "tap-dot": "^1.0.5",
     "tape": "^4.5.1"
   }
