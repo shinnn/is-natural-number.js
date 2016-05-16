@@ -4,5 +4,5 @@
 */
 window.isNaturalNumber = function isNaturalNumber(val, zero) {
   'use strict';
-  return val >= (zero ? 0 : 1) && Number.isInteger(val);
+  return val >= (zero ? 0 : 1) && Number.isSafeInteger(val);
 };

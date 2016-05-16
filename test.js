@@ -11,8 +11,6 @@ function runTest(description, main) {
     t.ok(main(1));
     t.ok(main(1e+1));
     t.ok(main(Number.MAX_SAFE_INTEGER));
-    t.ok(main(Number.MAX_SAFE_INTEGER + 1));
-    t.ok(main(Number.MAX_VALUE));
 
     t.notOk(main(0));
     t.notOk(main(1.5));
@@ -24,6 +22,8 @@ function runTest(description, main) {
     t.notOk(main(['0', '1']));
     t.notOk(main({number: 1}));
     t.notOk(main(/123/));
+    t.notOk(main(Number.MAX_SAFE_INTEGER + 1));
+    t.notOk(main(Number.MAX_VALUE));
     t.notOk(main(Number.MIN_VALUE));
     t.notOk(main(Number.POSITIVE_INFINITY));
     t.notOk(main(Number.NEGATIVE_INFINITY));

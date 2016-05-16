@@ -3,5 +3,5 @@
  * https://github.com/shinnn/is-natural-number.js
 */
 export default function isNaturalNumber(val, zero) {
-  return val >= (zero ? 0 : 1) && Number.isInteger(val);
+  return val >= (zero ? 0 : 1) && Number.isSafeInteger(val);
 }

@@ -5,5 +5,5 @@
 'use strict';
 
 module.exports = function isNaturalNumber(val, zero) {
-  return val >= (zero ? 0 : 1) && Number.isInteger(val);
+  return val >= (zero ? 0 : 1) && Number.isSafeInteger(val);
 };
