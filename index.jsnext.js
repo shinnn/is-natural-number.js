@@ -25,5 +25,5 @@ export default function isNaturalNumber(val, option) {
     }
   }
 
-  return val >= 1 && Number.isSafeInteger(val);
+  return Number.isSafeInteger(val) && val >= 1;
 }
